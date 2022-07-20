@@ -1,8 +1,8 @@
 #!/bin/bash
 
-sudo npm init
+npm init
 
-sudo npm install --save-dev lite-server
+npm install --save-dev lite-server
 
 tsc --init
 
@@ -12,4 +12,6 @@ echo "    \"start\": \"lite-server\""
 
 echo
 echo "  can aslo tweek tsconfig.json:"
-echo "   - target" 
+echo "   - target"
+echo "   - outDir"
+echo "   - sourceMap"
