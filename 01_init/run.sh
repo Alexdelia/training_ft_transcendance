@@ -1,5 +1,3 @@
 #!/bin/bash
 
-tsc app.ts
-
-npm start
+tsc --watch & npm start && fg
