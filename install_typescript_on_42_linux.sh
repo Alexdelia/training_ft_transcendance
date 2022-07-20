@@ -4,8 +4,8 @@ mkdir ~/.npm-global
 
 npm config set prefix '~/.npm-global'
 
-touch ~/.profile
-echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.profile
-source ~/.profile
+touch ~/.zshrc
+echo 'export PATH=~/.npm-global/bin:$PATH' >> ~/.zshrc
+source ~/.zshrc
 
 npm install -g typescript
