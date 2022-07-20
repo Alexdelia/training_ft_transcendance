@@ -14,4 +14,8 @@ echo
 echo "  can aslo tweek tsconfig.json:"
 echo "   - target"
 echo "   - outDir"
+echo "   - rootDir"
 echo "   - sourceMap"
+echo "   - noUnusedLocals"
+echo "   - noUnusedParameters"
+echo "   - noImplicitReturns"
