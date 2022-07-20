@@ -9,3 +9,7 @@ tsc --init
 echo
 echo "  create a start rule in the script section of package.json:"
 echo "    \"start\": \"lite-server\""
+
+echo
+echo "  can aslo tweek tsconfig.json:"
+echo "   - target" 
