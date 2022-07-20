@@ -6,4 +6,6 @@ sudo npm install --save-dev lite-server
 
 tsc --init
 
-echo "  create a run rule in the script section of package.json"
+echo
+echo "  create a start rule in the script section of package.json:"
+echo "    \"start\": \"lite-server\""
