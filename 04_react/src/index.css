@@ -5,11 +5,16 @@
   body {
 	font-family: sans-serif;
 	margin: 3rem;
-	background-color: #dfdfdf;
+	background-color: #3a3a3a;
   }
   
-  h1, h2 {
-	color: #333333;
+  h1 {
+	color: #d8d8d8;
+  }
+  
+  h2 {
+	color: #d8d8d8;
+	text-align: center;
   }
   
   .btn {
