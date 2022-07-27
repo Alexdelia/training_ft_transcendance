@@ -22,10 +22,12 @@ h2 {
 }
 
 p {
+	font: inherit;
 	color: #d8d8d8;
 	font-family: Arial;
 	font-size: large;
 	text-align: left;
+	margin-left: 10%;
 }
 
 .btn {
@@ -113,4 +115,10 @@ p {
 	height: 100vh;
 	top: 0;
 	left: 0;
+}
+
+.img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
 }

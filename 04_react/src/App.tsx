@@ -12,7 +12,7 @@ function App() {
 
 	addUser({ name: 'glaverdu' });
 	addUser({ name: 'idhiba' });
-	addUser({ name: 'adelille', win: 42, lose: 21, profilePicPath: '../data/profile_picture/adelille.png' });
+	addUser({ name: 'adelille', win: 42, lose: 21, profilePicPath: "profile_picture/adelille.png" });
 
 	return (
 		<div>
