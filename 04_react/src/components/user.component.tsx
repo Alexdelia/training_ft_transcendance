@@ -16,12 +16,14 @@ function User(props: { user: i_user }) {
 	}
 
 	return (
-		<div className="card">
-			<h2>{props.user.name}</h2>
-			<div className="action">
-				<button className="btn" onClick={() => { setShowChat(true) }}>💬</button>
-				<button className="btn" onClick={() => { setShowProfile(true) }}>👤</button>
-			</div>
+		<div>
+			<div className='card' style={{ display: "flex" }}>
+				<span className='h--username' style={{ flexGrow: "1" }}>{props.user.name}</span>
+				<span>
+					<button className='btn' onClick={() => { setShowChat(true) }}>💬</button>
+					<button className='btn' onClick={() => { setShowProfile(true) }}>👤</button>
+				</span >
+			</div >
 			{(showChat || showProfile) && <Backdrop onClick={resetAllStateHandle} />}
 			{showChat && <ChatModal srcName='adelille' dstName={props.user.name} onClose={() => { setShowChat(false) }} />}
 			{showProfile && <ProfileModal user={props.user} onClose={() => { setShowProfile(false) }} />}

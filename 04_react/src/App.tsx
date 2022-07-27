@@ -16,11 +16,23 @@ function App() {
 
 	return (
 		<div>
-			<h1>Users</h1>
-			<User user={users[0]} />
-			<User user={users[1]} />
-			<User user={users[2]} />
-		</div >
+			<div className='split split--chan split--left'>
+				<h1>Channel</h1>
+			</div >
+
+			<div className='split split--chan split--center'>
+				<h1>Chat</h1>
+			</div>
+
+			<div className='split split--chan split--right'>
+				<h2>Users</h2>
+				<div className='split--center-div'>
+					<User user={users[0]} />
+					<User user={users[1]} />
+					<User user={users[2]} />
+				</div>
+			</div >
+		</div>
 	);
 }
 

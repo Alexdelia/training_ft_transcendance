@@ -8,8 +8,8 @@ function ProfileModal(props: { user: i_user, onClose: () => void }) {
 	const p = (props.user.profilePicPath ? props.user.profilePicPath : "profile_picture/default.png");
 
 	return (
-		<div className="modal">
-			<button className="btn btn--cross" onClick={props.onClose}>✘</button>
+		<div className='modal'>
+			<button className='btn btn--cross' onClick={props.onClose}>✘</button>
 			<h2>{props.user.name}</h2>
 			<img className="img" src={p} alt="profile" />
 			<p>winrate: {w}|{l} {rate_to_print}</p>
