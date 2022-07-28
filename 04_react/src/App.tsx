@@ -1,6 +1,8 @@
 import React from 'react';
-import User from './components/user.component';
+
 import Chan from './components/chan.component';
+import Chat from './components/chat.component';
+import User from './components/user.component';
 
 import i_user from './interface/user.interface';
 
@@ -28,6 +30,9 @@ function App()
 
 			<div className='split split--chan split--center'>
 				<h1>Chat</h1>
+				<div className='split--center--div' /*this style doesn't exist*/>
+					<Chat />
+				</div>
 			</div>
 
 			<div className='split split--chan split--right'>

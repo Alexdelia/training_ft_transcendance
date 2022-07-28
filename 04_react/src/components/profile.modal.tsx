@@ -12,9 +12,6 @@ function ProfileModal(props: { user: i_user, onClose: () => void })
 	return (
 		<div className='modal'>
 			<div>
-				<button className='btn btn--cross' onClick={props.onClose}>✘</button>
-			</div>
-			<div>
 				<h2>{props.user.name}</h2>
 			</div>
 			<div>

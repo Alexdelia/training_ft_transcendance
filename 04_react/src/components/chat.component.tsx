@@ -2,13 +2,13 @@ import { useState } from "react";
 
 import i_user from "../interface/user.interface";
 
-function Chan()
+function Chat()
 {
 	return (
 		<div>
-			<button className='btn'>this is a button</button>
+			<div className='card card--border' />
 		</div>
 	);
 }
 
-export default Chan;
+export default Chat;
