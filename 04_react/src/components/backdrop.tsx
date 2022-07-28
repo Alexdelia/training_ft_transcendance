@@ -1,4 +1,4 @@
-function Backdrop(props: { onClick: () => void }) {
+	function Backdrop(props: { onClick: () => void }) {
 	return <div className='backdrop' onClick={props.onClick} />;
 }
 

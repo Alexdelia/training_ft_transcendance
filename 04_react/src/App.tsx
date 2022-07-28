@@ -1,12 +1,15 @@
 import React from 'react';
 import User from './components/user.component';
+import Chan from './components/chan.component';
 
 import i_user from './interface/user.interface';
 
-function App() {
+function App()
+{
 	let users: i_user[] = [];
 
-	function addUser(user: i_user) {
+	function addUser(user: i_user)
+	{
 		users.push(user);
 	}
 
@@ -18,6 +21,9 @@ function App() {
 		<div>
 			<div className='split split--chan split--left'>
 				<h1>Channel</h1>
+				<div className='split--left--div' /*this style doesn't exist*/>
+					<Chan />
+				</div>
 			</div >
 
 			<div className='split split--chan split--center'>
@@ -26,7 +32,7 @@ function App() {
 
 			<div className='split split--chan split--right'>
 				<h2>Users</h2>
-				<div className='split--center-div'>
+				<div className='split--center--div' /*this style doesn't exist*/>
 					<User user={users[0]} />
 					<User user={users[1]} />
 					<User user={users[2]} />

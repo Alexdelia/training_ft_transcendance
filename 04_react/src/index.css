@@ -3,7 +3,7 @@
 }
 
 body {
-	font-family: sans-serif;
+	font-family: System, monospace;
 	margin: 3rem;
 	background-color: #3a3a3a;
 }
@@ -66,21 +66,45 @@ p {
 }
 
 .btn {
+	display: inline-block;
 	font: inherit;
-	/*padding: 0.5rem 0.5rem;*/
+	font-weight: bolder;
 	cursor: pointer;
-	border-radius: 50%;
-	background-color: #800040;
+	position: relative;
+	padding: 0 1em;
+	background-origin: padding-box;
+	transition: all .2s ease-in;
+	background-size: auto;
+	background-color: #008000;
 	color: white;
-	border: 1px solid #800040;
-	margin: 0 0.25rem;
-	height: 2.5rem;
-	width: 2.5rem;
+	border: 0;
+	border-right: 2px outset #032800;
+	border-bottom: 2px outset #032800;
+	box-shadow: .5em .5em 3px rgba(0, 0, 0, .5);
+	height: 1.4rem;
+	text-align: center;
+	margin: 0;
 }
 
 .btn:hover {
-	background-color: #9c1458;
-	border-color: #9c1458;
+	position: absolute;
+	transition-property: all;
+	transition-duration: 0.2s;
+	background-color: #32CD32;
+	box-shadow: 0 0 0 rgba(0, 0, 0, .5);
+	margin-left: 0.3rem;
+	margin-top: 0.3rem;
+}
+
+.btn:hover:after {
+	content: '';
+	position: absolute;
+	top: -0.3rem;
+	left: -0.3rem;
+	height: calc(100% + 0.3rem);
+	width: calc(100% + 0.3rem);
+	/*border: 3px solid blue;*/
+	box-sizing: border-box;
 }
 
 .btn--alt {
@@ -126,6 +150,7 @@ p {
 	box-shadow: 0;
 	border: 0;
 	width: 100%;
+	margin-left: 0;
 }
 
 .actions {
