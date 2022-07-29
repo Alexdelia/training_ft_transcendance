@@ -15,10 +15,15 @@ function App()
 		users.push(user);
 	}
 
-	addUser({ name: 'glaverdu' });
-	addUser({ name: 'idhiba' });
-	addUser({ name: 'adelille', win: 42, lose: 21, profilePicPath: "profile_picture/adelille.png" });
+	addUser({ name: "glaverdu" });
+	addUser({ name: "idhiba" });
+	addUser({ name: "adelille", win: 42, lose: 21, profilePicPath: "profile_picture/adelille.png" });
+	addUser({ name: "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa", profilePicPath: "profile_picture/default.png" });
 
+	users[0].profilePicPath = "profile_picture/default.png";
+	users[1].profilePicPath = "profile_picture/default.png";
+
+	/* need to auto insert users*/
 	return (
 		<div>
 			<div className='split split--chan split--left'>
@@ -41,6 +46,7 @@ function App()
 					<User user={users[0]} />
 					<User user={users[1]} />
 					<User user={users[2]} />
+					<User user={users[3]} />
 				</div>
 			</div >
 		</div>

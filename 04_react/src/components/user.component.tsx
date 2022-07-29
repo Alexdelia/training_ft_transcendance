@@ -16,7 +16,10 @@ function User(props: { user: i_user })
 
 	return (
 		<div>
-			<button className='card card--border card--user' onClick={() => { setShowProfile(true) }}>{props.user.name}</button>
+			<button className='card card--border card--user' onClick={() => { setShowProfile(true) }}>
+				<img className='img img--card--user' src={props.user.profilePicPath} alt="profile" />
+				<span className='span--card--user'>{props.user.name}</span>
+			</button>
 			{showProfile && <Backdrop onClick={resetAllStateHandle} />}
 			{showProfile && <ProfileModal user={props.user} onClose={() => { setShowProfile(false) }} />}
 		</div>
