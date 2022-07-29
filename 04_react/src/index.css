@@ -30,6 +30,10 @@ p {
 	margin-left: 1rem;
 }
 
+input {
+	font: inherit;
+}
+
 .truncate {
 	white-space: nowrap;
 	overflow: hidden;

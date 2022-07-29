@@ -1,6 +1,6 @@
-import i_user from "../interface/user.interface";
+import i_user from "../../interface/user.interface";
 
-function ProfileModal(props: { user: i_user, onClose: () => void })
+function ProfileModal(props: { connected_user: i_user, user: i_user, onClose: () => void })
 {
 	const w = (props.user.win ? props.user.win : 0)
 	const l = (props.user.lose ? props.user.lose : 0)
@@ -25,7 +25,7 @@ function ProfileModal(props: { user: i_user, onClose: () => void })
 				</p>
 			</div>
 			<div>
-				{"adelille" !== props.user.name && <input className='card card--input' type='text' placeholder=' 💬' />}
+				{props.connected_user.name !== props.user.name && <input className='card card--input' type='text' placeholder=' 💬' />}
 			</div>
 		</div >
 	);
