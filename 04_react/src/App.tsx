@@ -30,9 +30,7 @@ function App()
 		<div>
 			<div className='split split--chan split--left'>
 				<div className='split--left--div' /*this style doesn't exist*/>
-					<Chan chan={chans[0]} />
-					<Chan chan={chans[1]} />
-					<Chan chan={chans[2]} />
+					<Chan chans={chans} />
 				</div>
 			</div >
 
