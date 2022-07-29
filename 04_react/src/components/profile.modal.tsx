@@ -10,13 +10,19 @@ function ProfileModal(props: { user: i_user, onClose: () => void })
 	return (
 		<div className='modal'>
 			<div>
-				<img className="img" style={{ height: "30vh", width: "30vh" }} src={props.user.profilePicPath} alt="profile" />
+				<img className='img' style={{ height: "30vh", width: "30vh" }} src={props.user.profilePicPath} alt="profile" />
 			</div>
 			<div>
-				<h2>{props.user.name}</h2>
+				<h2 className='truncate'>{props.user.name}</h2>
 			</div>
-			<div>
-				<p>winrate: {w}|{l} {rate_to_print}</p>
+			<div className='card card--alt' style={{ height: "22vh" }}>
+				<p>
+					<span>winrate:</span>
+					<span style={{ color: "#67c61a", marginLeft: "1rem" }}> {w}</span>
+					<span> | </span>
+					<span style={{ color: "red" }}>{l} </span>
+					<span style={{ color: "#8888ff", marginLeft: "1rem" }}>{rate_to_print}</span>
+				</p>
 			</div>
 			<div>
 				{"adelille" !== props.user.name && <input className='card card--input' type='text' placeholder=' 💬' />}

@@ -1,12 +1,12 @@
 import { useState } from "react";
 
-import i_user from "../interface/user.interface";
+import i_chan from "../interface/chan.interface";
 
-function Chan()
+function Chan(props: { chan: i_chan })
 {
 	return (
 		<div>
-			<button className='btn'>this is a button</button>
+			<div className='card card--border card--btn card--chan'>{props.chan.name}</div>
 		</div>
 	);
 }
