@@ -15,7 +15,7 @@ function SearchByName(props: { objs: i_user[] | i_chan[], query: string, Constru
 
 	return (
 		<div>
-			{ret};
+			{ret}
 		</div>
 	);
 }
