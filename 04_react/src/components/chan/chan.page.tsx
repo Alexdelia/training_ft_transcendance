@@ -21,7 +21,6 @@ function ChanPage(props: { connected_user: i_user })
 	users[0].profilePicPath = "profile_picture/default.png";
 	users[1].profilePicPath = "profile_picture/default.png";
 
-	/* need to auto insert users/chans*/
 	return (
 		<div>
 			<div className='split split--chan split--left'>

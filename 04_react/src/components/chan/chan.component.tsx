@@ -11,11 +11,19 @@ import i_user from "../../interface/user.interface";
 function Chans(props: { connected_user: i_user, chans: i_chan[], users: i_user[] })
 {
 	const [search, setSearch] = useState("");
+	const [selectedChan, setSelectedChan] = useState("global");
 
 	const searchHandle = (event: React.KeyboardEvent<HTMLInputElement>) =>
+	{ setSearch(event.target.value); };
+
+	function Chan(props: { obj: i_chan })
 	{
-		setSearch(event.target.value);
-	};
+		return (
+			<div>
+				<div className='card card--border card--btn card--chan' onClick={() => { setSelectedChan(props.obj.name) }}>{props.obj.name}</div>
+			</div>
+		);
+	}
 
 	return (
 		<div>
@@ -24,7 +32,7 @@ function Chans(props: { connected_user: i_user, chans: i_chan[], users: i_user[]
 
 			<div className='split split--chan split--center'>
 				<div className='split--center--div' /*this style doesn't exist*/>
-					<Chat chan={props.chans[1]} />
+					<SearchByName objs={props.chans} query={selectedChan} Constructor={Chat} />
 				</div>
 			</div>
 
@@ -34,15 +42,6 @@ function Chans(props: { connected_user: i_user, chans: i_chan[], users: i_user[]
 				</div>
 			</div >
 		</div >
-	);
-}
-
-function Chan(props: { obj: i_chan })
-{
-	return (
-		<div>
-			<div className='card card--border card--btn card--chan'>{props.obj.name}</div>
-		</div>
 	);
 }
 
